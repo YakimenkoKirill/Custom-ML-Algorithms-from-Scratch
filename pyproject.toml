@@ -23,11 +23,13 @@ dev = [
 
 [tool.ruff]
 line-length = 88
-target-version = "py310"
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "N", "W", "UP"]
-ignore = ["N803"]
+select = ["E", "F", "N"]
+ignore = [
+    "N803",
+    "N806",
+]
 
 [tool.mypy]
 python_version = "3.12"
