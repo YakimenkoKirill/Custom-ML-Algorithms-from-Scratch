@@ -83,7 +83,7 @@ def main() -> None:
         sklearn_model, X_train, X_test, y_train, y_test
         )
 
-    results_dir = Path("results")
+    results_dir = Path("benchmarks/results")
 
     timestamp = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
     file_path = results_dir / f"report_{timestamp}.txt"
