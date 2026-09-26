@@ -4,7 +4,7 @@
 
 ## Features
 - 100% test coverage(pytest)
-- Static type checking(mypy >= 1.9.0) & code formatting(ruff >= 0.3.0)
+- Static type checking(mypy >= 1.5.0) & code formatting(ruff >= 0.1.0)
 - Strict OOP interfaces adhering to Scikit-Learn conventions
 
 ## Content
@@ -56,14 +56,14 @@ where $\eta$ is the learning rate (`learning_rate`) and $\lambda$ is the L2 coef
 ```
 
 ## Perfomance benchmarks
-```markdown
+
 | Metrics | Custom_SGDRegressor | Sklearn_SGDRegressor |
-| Training time (s) | 0.7508 | 0.2205 |
-| Memory peak (MB) | 1.88 | 1.07 |
-| MSE | 1.2424 | 5.9107 |
-| MAE | 0.8894 | 1.9408 |
-| R2 | 1.0000 | 0.9999 |
-```
+| :--- | :---: | :---: |
+| **Training time (s)** | 0.7508 | 0.2205 |
+| **Memory peak (MB)** | 1.88 | 1.07 |
+| **MSE** | 1.2424 | 5.9107 |
+| **MAE** | 0.8894 | 1.9408 |
+| **R2** | 1.0000 | 0.9999 |
 
 ## Installation and launch
 
@@ -89,7 +89,7 @@ python3 benchmarks/benchmark_vs_sklearn.py
 ```
 
 ## Example of use
-```bash
+```python
 import numpy as np
 from custom_ml.linear_model.sgd_regressor import MiniBatchSGDRegressor
 from custom_ml.utils.metrics import r2_score
