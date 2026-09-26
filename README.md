@@ -22,19 +22,17 @@ The project was developed without using third-party ML frameworks for training(N
 ## Mathematical description
 
 #### Target function(MSE + L2)
-$$L(w, b) = \frac{1}{2N} \sum_{i=1}^N \left( x_i w + b - y_i \right)^2 + \frac{\lambda}{2} \Vert{}w\Vert{}_2^2$$
+$$L(w, b) = \frac{1}{N} \sum_{i=1}^{N} \left( x_i^T w + b - y_i \right)^2 + \frac{\lambda}{2} \lVert w \rVert_2^2$$
 
 #### Vectorized Gradients
-$$\nabla_w L = \frac{2}{B} X_{\text{batch}}^T \left( X_{\text{batch}} w + b - y_{\text{batch}} \right) + \lambda w$$
-
-$$\nabla_b L = \frac{2}{B} \sum_{i=1}^{B} e_i$$
+$$\nabla_w L = \frac{2}{B} X_{\text{batch}}^T e + \lambda w, \qquad \nabla_b L = \frac{2}{B} \sum_{i=1}^{B} e_i$$
 
 #### Parametr Update Rule
-$$w \leftarrow w - \eta \cdot \nabla_w L$$
+$$w \leftarrow w - \eta \nabla_w L, \qquad b \leftarrow b - \eta \nabla_b L$$
 
 $$b \leftarrow b - \eta \cdot \nabla_b L$$
 
-где $\eta$ — темп обучения (`learning_rate`), $\lambda$ — коэффициент регуляризации (`l2_param`).
+where $\eta$ is the learning rate (`learning_rate`) and $\lambda$ is the L2 coefficient (`l2_param`).
 
 ## Architecture and structure of the package
 ```bash
@@ -73,11 +71,11 @@ $$b \leftarrow b - \eta \cdot \nabla_b L$$
 
 #### 1.Cloning the repository and setting up the environment:
 ```bash
-git clone [git@github.com:YakimenkoKirill/Custom-ML-Algorithms-from-Scratch.git](https://github.com/YakimenkoKirill/Custom-ML-Algorithms-from-Scratch.git)
+git clone https://github.com/YakimenkoKirill/Custom-ML-Algorithms-from-Scratch.git
 cd Custom-ML-Algorithms-from-Scratch
 python -m venv .venv
 source .venv/bin/activate  # Linux/macOS
-pip install -r requirements.txt
+pip install -e ".[dev]"  
 ```
 
 #### 2.Running static analysis and tests:
