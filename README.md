@@ -30,8 +30,6 @@ $$\nabla_w L = \frac{2}{B} X_{\text{batch}}^T e + \lambda w, \qquad \nabla_b L =
 #### Parametr Update Rule
 $$w \leftarrow w - \eta \nabla_w L, \qquad b \leftarrow b - \eta \nabla_b L$$
 
-$$b \leftarrow b - \eta \cdot \nabla_b L$$
-
 where $\eta$ is the learning rate (`learning_rate`) and $\lambda$ is the L2 coefficient (`l2_param`).
 
 ## Architecture and structure of the package
