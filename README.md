@@ -56,14 +56,14 @@ where $\eta$ is the learning rate (`learning_rate`) and $\lambda$ is the L2 coef
 ```
 
 ## Perfomance benchmarks
-```markdown
+|---|---|---|
 | Metrics | Custom_SGDRegressor | Sklearn_SGDRegressor |
 | Training time (s) | 0.7508 | 0.2205 |
 | Memory peak (MB) | 1.88 | 1.07 |
 | MSE | 1.2424 | 5.9107 |
 | MAE | 0.8894 | 1.9408 |
 | R2 | 1.0000 | 0.9999 |
-```
+|---|---|---|
 
 ## Installation and launch
 
