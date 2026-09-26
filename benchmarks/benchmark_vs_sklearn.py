@@ -76,7 +76,7 @@ def main() -> None:
         max_iter=20,
         alpha=0.01,
         random_state=21,
-        tol = 1e-4
+        tol = None
     )
 
     sklearn_result = benchmark_model(
